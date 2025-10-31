@@ -1,0 +1,54 @@
+cabal-version:        2.2
+
+name:                 hotel-animais
+version:              0.1.0.0
+description:          Um CRUD de hotel de animais em Haskell com persistência JSON e UI de terminal.
+author:               [Seu Nome Aqui]
+license:              BSD-3-Clause
+license-file:         LICENSE
+build-type:           Simple
+
+executable hotel-animais
+  hs-source-dirs:     src
+  main-is:            Main.hs
+  default-language:   Haskell2010
+
+  -- Define 'DeriveGeneric' como padrão para todos os arquivos
+  default-extensions: DeriveGeneric
+
+  other-modules:
+      -- Módulos de Tipo
+      Tipos.Animal
+      Tipos.Common
+      Tipos.Dono
+      Tipos.Hotel
+      Tipos.Pagamento
+      Tipos.Quarto
+      Tipos.Reserva
+
+      -- Módulos do bd
+      Database.State
+      Database.Finders
+      Database.Persistence
+
+      -- Módulos de Service
+      Service.DonoService
+      Service.AnimalService
+      Service.QuartoService
+      Service.ReservaService
+
+  build-depends:      
+      base >= 4.7 && < 5,
+      aeson >= 2.0,           -- Para codificar/decodificar JSON
+      bytestring >= 0.10,     -- Para ler/escrever arquivos
+      directory >= 1.3        -- Para 'doesFileExist'
+
+  ghc-options:        -Wall
+                      -Wcompat
+                      -Widentities
+                      -Wincomplete-record-updates
+                      -Wincomplete-uni-patterns
+                      -Wmissing-export-lists
+                      -Wmissing-home-modules
+                      -Wpartial-fields
+                      -Wredundant-constraints
