@@ -35,6 +35,8 @@ Toda a lógica é implementada de forma funcional, e o estado do hotel é persis
     * `aeson`: Para codificação (serialização) e decodificação (parsing) de dados para o formato JSON.
     * `bytestring`: Para leitura e escrita eficiente de arquivos.
 
-## 📂 Estrutura do Projeto
+## OBS:
+
+Após a primeira execução, um arquivo chamado `hotel.json` será criado na raiz do projeto. Este arquivo *é* o seu banco de dados. Você pode abri-lo para inspecionar o estado do hotel.
 
 O código-fonte está localizado inteiramente na pasta `src/` e é organizado da seguinte forma:
