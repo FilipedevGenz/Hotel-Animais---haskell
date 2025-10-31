@@ -12,7 +12,7 @@ O sistema é capaz de gerenciar:
 
 Toda a lógica é implementada de forma funcional, e o estado do hotel é persistido em um arquivo `hotel.json` local.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 * **CRUD de Donos:** Adicionar, buscar, atualizar e remover donos (validado por CPF).
 * **CRUD de Animais:** Adicionar, buscar, atualizar e remover animais (ligados a um dono).
@@ -25,7 +25,7 @@ Toda a lógica é implementada de forma funcional, e o estado do hotel é persis
     * Não permite remover um animal que possua uma reserva ativa.
 * **Persistência de Dados:** O estado completo do hotel (listas de donos, animais, quartos e reservas) é automaticamente salvo em um arquivo `hotel.json` formatado sempre que o programa é encerrado, e recarregado quando ele inicia.
 
-## 🛠️ Tecnologias Utilizadas
+## Stack Utilizada
 
 * **Linguagem:** [Haskell](https://www.haskell.org/) (GHC)
 * **Gerenciador de Pacotes:** [Cabal](https://www.haskell.org/cabal/)
