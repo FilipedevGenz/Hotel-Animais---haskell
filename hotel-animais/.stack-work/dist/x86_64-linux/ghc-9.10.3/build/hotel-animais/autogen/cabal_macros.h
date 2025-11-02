@@ -10,6 +10,26 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_hotel_animais */
+/* package aeson-2.2.3.0 */
+#ifndef VERSION_aeson
+#define VERSION_aeson "2.2.3.0"
+#endif /* VERSION_aeson */
+#ifndef MIN_VERSION_aeson
+#define MIN_VERSION_aeson(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  2 || \
+  (major1) == 2 && (major2) == 2 && (minor) <= 3)
+#endif /* MIN_VERSION_aeson */
+/* package aeson-pretty-0.8.10 */
+#ifndef VERSION_aeson_pretty
+#define VERSION_aeson_pretty "0.8.10"
+#endif /* VERSION_aeson_pretty */
+#ifndef MIN_VERSION_aeson_pretty
+#define MIN_VERSION_aeson_pretty(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  8 || \
+  (major1) == 0 && (major2) == 8 && (minor) <= 10)
+#endif /* MIN_VERSION_aeson_pretty */
 /* package base-4.20.2.0 */
 #ifndef VERSION_base
 #define VERSION_base "4.20.2.0"
@@ -20,6 +40,26 @@
   (major1) == 4 && (major2) <  20 || \
   (major1) == 4 && (major2) == 20 && (minor) <= 2)
 #endif /* MIN_VERSION_base */
+/* package bytestring-0.12.2.0 */
+#ifndef VERSION_bytestring
+#define VERSION_bytestring "0.12.2.0"
+#endif /* VERSION_bytestring */
+#ifndef MIN_VERSION_bytestring
+#define MIN_VERSION_bytestring(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  12 || \
+  (major1) == 0 && (major2) == 12 && (minor) <= 2)
+#endif /* MIN_VERSION_bytestring */
+/* package directory-1.3.8.5 */
+#ifndef VERSION_directory
+#define VERSION_directory "1.3.8.5"
+#endif /* VERSION_directory */
+#ifndef MIN_VERSION_directory
+#define MIN_VERSION_directory(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  3 || \
+  (major1) == 1 && (major2) == 3 && (minor) <= 8)
+#endif /* MIN_VERSION_directory */
 
 /* tool gcc-13 */
 #ifndef TOOL_VERSION_gcc
@@ -113,7 +153,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "hotel-animais-0.1.0.0-7zYzt2usRSr266uQqax15M-hotel-animais"
+#define CURRENT_COMPONENT_ID "hotel-animais-0.1.0.0-1E3NpSAe5XC8Pvs43hD89p-hotel-animais"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

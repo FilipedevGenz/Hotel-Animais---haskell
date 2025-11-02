@@ -1,8 +1,32 @@
-/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/CHANGELOG.md:
-  hash: 82a40cc905f62d2692268081fd650240e2a87d839f8a8fe7c1bdfb5b528bd7d8
-/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/README.md:
-  hash: c517f2151f4232b38056b2e90a5af2b8adbd9e0d532b88dd4c9f69b9b1fa83eb
-/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/hotel-animais.cabal:
-  hash: 2dfed046d07cef82f0f064986d4f7033e09d230c8496473df8b6abd168eb09fe
-/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/src/Main.hs:
-  hash: 36b4234172b25938ecf88a82f014fed25f81f0e4d80953379e7760a4c4060c13
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/hotel-animais.cabal:
+  hash: 1c458a709c63d3814ad08c81403ced7a1fe4321be2ad0036b98b2faa484ebdca
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Database/Finders.hs:
+  hash: cdc4ad1a41427bac6e5f359bd6c771cbc0d5efcc1fda791f587787f30acbeb12
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Database/Persistence.hs:
+  hash: a24b1ade3a9502eae66ebb5b0f22a281b3a889303768aef935305d9a9a5d1698
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Database/State.hs:
+  hash: bf6f145919672acd5279ee1b9407e77813a2fd8a47bad18d8e48b36ce36a81e6
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Main.hs:
+  hash: 8441059ccd8baec0aae8704942d8d74b8d67f3d262b38c78203f387f4a7bed98
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Service/AnimalService.hs:
+  hash: 686056a50dd5d0e6e714c0be7176e95decf1d8d4956e3fc668257339e4da792a
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Service/DonoService.hs:
+  hash: 17fbb7323b86c6a56025fc534db4fcb9301fa2f8c5abc9b12a9596db8d64cb5d
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Service/QuartoService.hs:
+  hash: c759a3d89ee2cdbfcf89bfb3612916b1fbf1f227e8af21c79b33ce7fa40ed018
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Service/ReservaService.hs:
+  hash: 00188cc0c82703cb23828bfabe56a4c62df20e4edc2d50eee8fdbdb74f3cafd1
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Tipos/Animal.hs:
+  hash: ed698540b2418df4c71f0e0e6239d4e50c56acfa86b297c7ce851fa28e073848
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Tipos/Common.hs:
+  hash: 8b9d43bb8197c27a676fe3aa451b81a8e52dbd5e19e8abefefa7cbaa3b82517c
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Tipos/Dono.hs:
+  hash: 67e7e7c373e8435718d8a43cdbec0ea1af32593475212d7ca81e9fa6f21018aa
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Tipos/Hotel.hs:
+  hash: 8a4b911dd0b2a0662f08327646649dc9ad699dd79e58f32c9325b4accbce7c88
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Tipos/Pagamento.hs:
+  hash: fb9e352f93c8838927c9b7af36a7e0b5f3c3a350369a68b944d9a0052552ec14
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Tipos/Quarto.hs:
+  hash: 9e0ff186e0bc36c9af731ca6bb7e1f0e2d79b4e9871789e46203d241fc4ecf17
+/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/src/Tipos/Reserva.hs:
+  hash: 9f5ef6b55daec748f04bf8cd6276ee08973aa0911d31684050948353b9a71393

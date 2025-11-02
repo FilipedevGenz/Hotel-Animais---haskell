@@ -6,7 +6,7 @@ module Service.AnimalService
     ) where
 
 import Tipos.Common
-import Tipos.Dono (Dono(..))
+-- import Tipos.Dono (Dono(..)) -- <--- FIX: Importação removida
 import Tipos.Animal
 import Tipos.Reserva (Reserva(..))
 import Tipos.Hotel
@@ -36,24 +36,24 @@ adicionarAnimal donoCpf nome idade especie raca peso hotel =
             in (hotelAtualizado, Right novoAnimal)
 
 atualizarAnimal :: AnimalID -> (Animal -> Animal) -> Hotel -> (Hotel, Either String Animal)
-atualizarAnimal id fn hotel =
-    case findAnimal id hotel of
+atualizarAnimal animalId fn hotel =
+    case findAnimal animalId hotel of
         Nothing -> (hotel, Left "Erro: Animal não encontrado.")
         Just animalAntigo ->
             let animalAtualizado = fn animalAntigo
-                animalValidado = animalAtualizado { animalID = id, donoCpfAnimal = donoCpfAnimal animalAntigo }
-                outrosAnimais = filter (\a -> animalID a /= id) (animais hotel)
+                animalValidado = animalAtualizado { animalID = animalId, donoCpfAnimal = donoCpfAnimal animalAntigo }
+                outrosAnimais = filter (\a -> animalID a /= animalId) (animais hotel)
                 novosAnimais = animalValidado : outrosAnimais
                 hotelAtualizado = hotel { animais = novosAnimais }
             in (hotelAtualizado, Right animalValidado)
 
 removerAnimal :: AnimalID -> Hotel -> (Hotel, Either String ())
-removerAnimal id hotel =
-    let reservasDoAnimal = filter (\r -> animalIDReserva r == id) (reservas hotel)
+removerAnimal animalId hotel =
+    let reservasDoAnimal = filter (\r -> animalIDReserva r == animalId) (reservas hotel)
     in if not (null reservasDoAnimal)
         then (hotel, Left "Erro: Não é possível remover animal com reservas ativas.")
         else
-            let (removidos, restantes) = partition (\a -> animalID a == id) (animais hotel)
+            let (removidos, restantes) = partition (\a -> animalID a == animalId) (animais hotel)
             in if null removidos
                 then (hotel, Left "Erro: Animal não encontrado.")
                 else (hotel { animais = restantes }, Right ())

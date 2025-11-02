@@ -1,12 +1,17 @@
 module Tipos.Reserva where
 
 import Tipos.Common
+import GHC.Generics (Generic)
+import Data.Aeson (ToJSON, FromJSON)
 
 data Reserva = Reserva
-    { reservaID     :: ReservaID  -- PK
-    , animalIDReserva :: AnimalID -- FK Animal
-    , quartoIDReserva :: QuartoID -- FK Quarto
+    { reservaID     :: ReservaID  -- Chave Primária (ID)
+    , animalIDReserva :: AnimalID -- Chave Estrangeira para Animal
+    , quartoIDReserva :: QuartoID -- Chave Estrangeira para Quarto
     , dataEntrada   :: Data
     , dataSaida     :: Data
     , precoTotal    :: Float
-    } deriving (Show, Eq)
+    } deriving (Show, Eq, Generic)
+
+instance ToJSON Reserva
+instance FromJSON Reserva

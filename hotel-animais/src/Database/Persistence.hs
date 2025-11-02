@@ -5,7 +5,8 @@ module Database.Persistence
 
 import Tipos.Hotel (Hotel)
 import Database.State (initialHotel)
-import Data.Aeson (FromJSON, ToJSON, decode, encodePretty)
+import Data.Aeson (FromJSON, ToJSON, decode) 
+import Data.Aeson.Encode.Pretty (encodePretty)      
 import qualified Data.ByteString.Lazy as B
 import System.Directory (doesFileExist)
 import System.IO (FilePath)
@@ -18,12 +19,11 @@ salvarHotel arquivo hotel = do
     putStrLn "Dados salvos com sucesso."
 
 -- Tenta carregar o estado do hotel de um arquivo JSON.
--- Se o arquivo não existir ou estiver corrompido, retorna o 'initialHotel'.
 carregarHotel :: FilePath -> IO Hotel
 carregarHotel arquivo = do
     putStrLn $ "Carregando dados de " ++ arquivo ++ "..."
     existe <- doesFileExist arquivo
-
+    
     if not existe
     then do
         putStrLn "Arquivo não encontrado. Criando novo hotel..."

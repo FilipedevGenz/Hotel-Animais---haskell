@@ -1,12 +1,21 @@
-module Tipos.Reserva where
+module Tipos.Hotel where
 
-import Tipos.Common
+import Tipos.Quarto
+import Tipos.Reserva
+import Tipos.Animal
+import Tipos.Dono
+import GHC.Generics (Generic)
+import Data.Aeson (ToJSON, FromJSON)
 
-data Reserva = Reserva
-    { reservaID     :: ReservaID  -- pk
-    , animalIDReserva :: AnimalID -- fk animal
-    , quartoIDReserva :: QuartoID -- fk querto
-    , dataEntrada   :: Data
-    , dataSaida     :: Data
-    , precoTotal    :: Float
-    } deriving (Show, Eq)
+data Hotel = Hotel
+    { nomeHotel     :: String
+    , quartos       :: [Quarto]
+    , donos         :: [Dono]
+    , animais       :: [Animal]
+    , reservas      :: [Reserva]
+    , nextAnimalID  :: Int
+    , nextReservaID :: Int
+    } deriving (Show, Eq, Generic)
+
+instance ToJSON Hotel
+instance FromJSON Hotel

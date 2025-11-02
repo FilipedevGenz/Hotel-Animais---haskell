@@ -46,12 +46,12 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
-bindir     = "/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/bin"
-libdir     = "/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/lib/x86_64-linux-ghc-9.10.3-b4c3/hotel-animais-0.1.0.0-7zYzt2usRSr266uQqax15M-hotel-animais"
-dynlibdir  = "/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/lib/x86_64-linux-ghc-9.10.3-b4c3"
-datadir    = "/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/share/x86_64-linux-ghc-9.10.3-b4c3/hotel-animais-0.1.0.0"
-libexecdir = "/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/libexec/x86_64-linux-ghc-9.10.3-b4c3/hotel-animais-0.1.0.0"
-sysconfdir = "/media/lipe/Hard Disk 1TB/github/hotelAnimais/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/etc"
+bindir     = "/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/bin"
+libdir     = "/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/lib/x86_64-linux-ghc-9.10.3-b4c3/hotel-animais-0.1.0.0-1E3NpSAe5XC8Pvs43hD89p-hotel-animais"
+dynlibdir  = "/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/lib/x86_64-linux-ghc-9.10.3-b4c3"
+datadir    = "/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/share/x86_64-linux-ghc-9.10.3-b4c3/hotel-animais-0.1.0.0"
+libexecdir = "/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/libexec/x86_64-linux-ghc-9.10.3-b4c3/hotel-animais-0.1.0.0"
+sysconfdir = "/home/lipe/Documentos/GitHub/Hotel-Animais---haskell/hotel-animais/.stack-work/install/x86_64-linux/df23554419e7ab88ba795304fc39bc44a39aed6283ecb0e3b5663ba56613e527/9.10.3/etc"
 
 getBinDir     = catchIO (getEnv "hotel_animais_bindir")     (\_ -> return bindir)
 getLibDir     = catchIO (getEnv "hotel_animais_libdir")     (\_ -> return libdir)
