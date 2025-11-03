@@ -1,4 +1,4 @@
--- menu só Donos
+-- menu Donos
 module Interface.DonoCLI (gerenciarDonos, handleListarDonos) where
 
 import Tipos.Hotel (Hotel(..), donos) 

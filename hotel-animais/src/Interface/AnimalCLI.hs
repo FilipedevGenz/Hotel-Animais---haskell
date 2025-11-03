@@ -25,7 +25,6 @@ gerenciarAnimais hotel = do
     -- swich case pra tratar a escolha do usuário
     case opcao of
         "1" -> do
-           
             (novoHotel, res) <- handleAdicionarAnimal hotel
             -- checa se o 'service' retornou um erro (Left) ou sucesso (Right)
             case res of
@@ -34,7 +33,7 @@ gerenciarAnimais hotel = do
             gerenciarAnimais novoHotel
 
         "2" -> handleListarAnimais hotel >> gerenciarAnimais hotel -- só lista e chama o menu de novo
-        "0" -> return hotel -- Ponto de saída. Devolve o 'hotel' pro 'appLoop' principal.
+        "0" -> return hotel -- Ponto de saída. Devolve o 'hotel' pro 'appLoop' principal
         _   -> putStrLn "Opção inválida." >> gerenciarAnimais hotel -- se digitar qualquer outra coisa
 
 -- Pede todos os dados do animal pro usuário
@@ -78,5 +77,5 @@ handleListarAnimais hotel = do
     -- checa se a lista tá vazia antes de tentar imprimir.
     if null lista
     then putStrLn "Nenhum animal cadastrado."
-    -- 'mapM_' (monádico) aplica o 'imprimirAnimal' em cada item da lista.
+    -- 'mapM_' aplica o 'imprimirAnimal' em cada item da lista.
     else mapM_ imprimirAnimal lista

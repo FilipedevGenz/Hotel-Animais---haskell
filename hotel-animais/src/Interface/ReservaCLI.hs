@@ -73,7 +73,7 @@ handleRemoverReserva hotel = do
             -- passa pro 'Service' fazer a remoção (e liberar o quarto)
             return $ removerReserva reservaID hotel
 
--- como imprimir uma reserva na tela.
+-- como imprimir uma reserva na tela
 imprimirReserva :: Reserva -> IO ()
 imprimirReserva reserva = do 
     putStrLn $ "  ID Reserva: " ++ show (reservaID reserva)
@@ -82,9 +82,9 @@ imprimirReserva reserva = do
     putStrLn $ "  Entrada:    " ++ dataEntrada reserva
     putStrLn $ "  Saída:      " ++ dataSaida reserva
     putStrLn $ "  Preço:      R$ " ++ show (precoTotal reserva)
-    putStrLn " "--------------------------------" 
+    putStrLn " --------------------------------" 
 
--- lista todas as reservas.
+-- lista todas as reservas
 handleListarReservas :: Hotel -> IO ()
 handleListarReservas hotel = do
     putStrLn "\n--- LISTA DE RESERVAS ---"

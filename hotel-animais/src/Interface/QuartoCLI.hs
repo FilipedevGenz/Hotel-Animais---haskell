@@ -53,7 +53,7 @@ handleAdicionarQuarto hotel = do
             -- e passa pro 'Service' salvar
             in return $ adicionarQuarto novoQuarto hotel
 
--- como imprimir um quarto na tela.
+-- como imprimir um quarto na tela
 imprimirQuarto :: Quarto -> IO ()
 imprimirQuarto quarto = do
     putStrLn $ "  Número:   " ++ show (numeroQuarto quarto)

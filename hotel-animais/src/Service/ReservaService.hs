@@ -11,9 +11,9 @@ import Tipos.Quarto (Quarto(..))
 import Tipos.Reserva
 import Tipos.Hotel
 import Database.Finders (findAnimal, findQuarto, findReserva) -- Funções de busca
-import Data.List (partition, filter, map) -- 'map' é usado para atualizar o quarto
+--import Data.List (partition, filter, map) -- 'map' é usado para atualizar o quarto
 
--- 'buscarReserva' é um apelido para a função 'findReserva' (Maybe Reserva).
+-- 'buscarReserva' é como chamamos a função 'findReserva' (Maybe Reserva).
 buscarReserva :: ReservaID -> Hotel -> Maybe Reserva
 buscarReserva = findReserva
 
@@ -40,13 +40,13 @@ adicionarReserva animalId quartoId dtEntrada dtSaida preco hotel =
                         , precoTotal = preco
                         }
                     
-                    -- Marca o quarto como ocupado.
+                    -- Marca o quarto como ocupado
                     quartoOcupado = quarto { ocupado = True }
                     -- Recria a lista de quartos com o quarto atualizado.
                     outrosQuartos = filter (\q -> numeroQuarto q /= quartoId) (quartos hotel)
                     novosQuartos = quartoOcupado : outrosQuartos
                     
-                    -- Adiciona a nova reserva à lista.
+                    -- Adiciona a nova reserva à lista
                     novasReservas = novaReserva : reservas hotel
                     
                     -- Atualiza o estado do hotel com as duas listas novas e o próximo ID.
@@ -57,7 +57,7 @@ adicionarReserva animalId quartoId dtEntrada dtSaida preco hotel =
                         }
                 in (hotelAtualizado, Right novaReserva)
 
--- atualiza dados de uma reserva existente usando uma função 'fn'.
+-- atualiza dados de uma reserva existente usando uma função 'fn'
 atualizarReserva :: ReservaID -> (Reserva -> Reserva) -> Hotel -> (Hotel, Either String Reserva)
 atualizarReserva reservaId fn hotel =
     -- verifica se a reserva existe.
@@ -65,28 +65,28 @@ atualizarReserva reservaId fn hotel =
         Nothing -> (hotel, Left "Erro: Reserva não encontrada.")
         Just reservaAntiga ->
             let 
-                -- faz a aplicação da função de atualização.
+                -- faz a aplicação da função de atualização
                 reservaAtualizada = fn reservaAntiga
                 
                 -- REGRA: Garante que IDs e chaves estrangeiras (animal/quarto)
-                -- não sejam alterados pela função 'fn'.
+                -- não sejam alterados pela função 'fn'
                 reservaValidada = reservaAtualizada
                     { reservaID = reservaID reservaAntiga
                     , animalIDReserva = animalIDReserva reservaAntiga
                     , quartoIDReserva = quartoIDReserva reservaAntiga
                     }
                 
-                -- faz a recriação da lista de reservas com a versão atualizada.
+                -- faz a recriação da lista de reservas com a versão atualizada
                 outrasReservas = filter (\r -> reservaID r /= reservaId) (reservas hotel)
                 novasReservas = reservaValidada : outrasReservas
                 hotelAtualizado = hotel { reservas = novasReservas }
             
             in (hotelAtualizado, Right reservaValidada)
 
--- Remove uma reserva (faz check-out) e libera o quarto.
+-- Remove uma reserva (faz check-out) e libera o quarto
 removerReserva :: ReservaID -> Hotel -> (Hotel, Either String ())
 removerReserva reservaId hotel =
-    -- Verifica se a reserva existe.
+    -- Verifica se a reserva existe
     case findReserva reservaId hotel of
         Nothing -> (hotel, Left "Erro: Reserva não encontrada.")
         Just reserva ->
