@@ -31,7 +31,10 @@ atualizarDono cpf fn hotel =
         Just donoAntigo ->
             let donoAtualizado = fn donoAntigo
                 donoValidado = donoAtualizado { cpfDono = cpfDono donoAntigo }
-                outrosDonos = filter (\d -> cpfDono d /= cpf) (donos hotel)
+                
+                -- MUDANÇA AQUI: 'filter' foi substituído pela compreensão de lista
+                outrosDonos = [d | d <- donos hotel, cpfDono d /= cpf]
+                
                 novosDonos = donoValidado : outrosDonos
                 hotelAtualizado = hotel { donos = novosDonos }
             in (hotelAtualizado, Right donoValidado)

@@ -7,16 +7,15 @@ module Service.ReservaService
 
 import Tipos.Common
 import Tipos.Quarto (Quarto(..))
--- import Tipos.Animal (Animal(..)) -- <--- FIX: Importação removida
 import Tipos.Reserva
 import Tipos.Hotel
 import Database.Finders (findAnimal, findQuarto, findReserva)
-import Data.List (partition)
+-- MUDANÇA AQUI: 'partition' não é mais necessário, mas 'map' (do Prelude) será usado.
+import Data.List (partition, filter) 
 
 buscarReserva :: ReservaID -> Hotel -> Maybe Reserva
 buscarReserva = findReserva
 
--- FIX: Argumentos renomeados para letras minúsculas (animalId, quartoId)
 adicionarReserva :: AnimalID -> QuartoID -> Data -> Data -> Float -> Hotel -> (Hotel, Either String Reserva)
 adicionarReserva animalId quartoId dtEntrada dtSaida preco hotel =
     case (findAnimal animalId hotel, findQuarto quartoId hotel) of
@@ -49,7 +48,6 @@ adicionarReserva animalId quartoId dtEntrada dtSaida preco hotel =
                         }
                 in (hotelAtualizado, Right novaReserva)
 
--- (Esta função já estava correta)
 atualizarReserva :: ReservaID -> (Reserva -> Reserva) -> Hotel -> (Hotel, Either String Reserva)
 atualizarReserva reservaId fn hotel =
     case findReserva reservaId hotel of
@@ -66,19 +64,24 @@ atualizarReserva reservaId fn hotel =
                 hotelAtualizado = hotel { reservas = novasReservas }
             in (hotelAtualizado, Right reservaValidada)
 
--- (Esta função já estava correta)
 removerReserva :: ReservaID -> Hotel -> (Hotel, Either String ())
 removerReserva reservaId hotel =
     case findReserva reservaId hotel of
         Nothing -> (hotel, Left "Erro: Reserva não encontrada.")
         Just reserva ->
-            let quartoID = quartoIDReserva reserva
-                (quartoAntigo, outrosQuartos) = partition (\q -> numeroQuarto q == quartoID) (quartos hotel)
-                quartoLiberado = case quartoAntigo of
-                                   (q:_) -> [q { ocupado = False }]
-                                   []    -> []
+            let 
+                quartoID = quartoIDReserva reserva
                 
-                novosQuartos = quartoLiberado ++ outrosQuartos
+                -- MUDANÇA AQUI (Início)
+                -- 1. Criamos uma função que sabe como liberar UM quarto
+                liberarQuarto q = if numeroQuarto q == quartoID
+                                  then q { ocupado = False } -- Libera o quarto
+                                  else q                   -- Mantém o quarto como está
+
+                -- 2. Usamos 'map' para aplicar essa função a TODOS os quartos
+                novosQuartos = map liberarQuarto (quartos hotel)
+                -- MUDANÇA AQUI (Fim)
+
                 reservasRestantes = filter (\r -> reservaID r /= reservaId) (reservas hotel)
                 
                 hotelAtualizado = hotel 
