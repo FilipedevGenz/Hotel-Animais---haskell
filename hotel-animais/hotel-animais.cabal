@@ -37,6 +37,14 @@ executable hotel-animais
       Service.QuartoService
       Service.ReservaService
 
+      -- Módulos da Interface 
+      Interface.CLI
+      Interface.DonoCLI
+      Interface.Utils
+      Interface.AnimalCLI
+      Interface.QuartoCLI
+      Interface.ReservaCLI
+
   build-depends:      
       base >= 4.7 && < 5,
       aeson >= 2.0, 

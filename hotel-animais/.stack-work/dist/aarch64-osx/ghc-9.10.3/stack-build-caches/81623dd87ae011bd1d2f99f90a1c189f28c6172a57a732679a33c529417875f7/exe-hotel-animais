@@ -1,0 +1,44 @@
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/hotel-animais.cabal:
+  hash: fbf50ed1e4c563c595f5d077cab1d49a1b1dcf694e37dab51b27f11677b8c5ad
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Database/Finders.hs:
+  hash: cdc4ad1a41427bac6e5f359bd6c771cbc0d5efcc1fda791f587787f30acbeb12
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Database/Persistence.hs:
+  hash: a24b1ade3a9502eae66ebb5b0f22a281b3a889303768aef935305d9a9a5d1698
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Database/State.hs:
+  hash: bf6f145919672acd5279ee1b9407e77813a2fd8a47bad18d8e48b36ce36a81e6
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Interface/AnimalCLI.hs:
+  hash: 3a5ff8ac4278fb21a710d4d5e56078faf7ce9a2dde56818a96ecf6c7a534e6d5
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Interface/CLI.hs:
+  hash: 9ab957bc96c7fbe2ad1fc355311bb8901e9030b639cc77e05ff11f030952d277
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Interface/DonoCLI.hs:
+  hash: d310145c343dfcb311077d67bc93fc1298ba6d0fa7559c2ff10784b03f1d0a44
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Interface/QuartoCLI.hs:
+  hash: 7ecc500856d10e98eef88e8c90a234424d83864f1046fd21d63c8c805858ef59
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Interface/ReservaCLI.hs:
+  hash: a2daaca8f1eed22e85183a90bc277308a88541be26d50b6760afc7d12616ee45
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Interface/Utils.hs:
+  hash: 1b08c7014b3e68483d41cce8aa79f9d92bffdf670eee49b07f9027b048429661
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Main.hs:
+  hash: ee6b9de8ca25007ebc13de5e950ec770a0ec7acf02b3eb66bf10908fee89e68b
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Service/AnimalService.hs:
+  hash: 686056a50dd5d0e6e714c0be7176e95decf1d8d4956e3fc668257339e4da792a
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Service/DonoService.hs:
+  hash: 17fbb7323b86c6a56025fc534db4fcb9301fa2f8c5abc9b12a9596db8d64cb5d
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Service/QuartoService.hs:
+  hash: c759a3d89ee2cdbfcf89bfb3612916b1fbf1f227e8af21c79b33ce7fa40ed018
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Service/ReservaService.hs:
+  hash: 00188cc0c82703cb23828bfabe56a4c62df20e4edc2d50eee8fdbdb74f3cafd1
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Tipos/Animal.hs:
+  hash: ed698540b2418df4c71f0e0e6239d4e50c56acfa86b297c7ce851fa28e073848
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Tipos/Common.hs:
+  hash: 8b9d43bb8197c27a676fe3aa451b81a8e52dbd5e19e8abefefa7cbaa3b82517c
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Tipos/Dono.hs:
+  hash: 67e7e7c373e8435718d8a43cdbec0ea1af32593475212d7ca81e9fa6f21018aa
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Tipos/Hotel.hs:
+  hash: 8a4b911dd0b2a0662f08327646649dc9ad699dd79e58f32c9325b4accbce7c88
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Tipos/Pagamento.hs:
+  hash: fb9e352f93c8838927c9b7af36a7e0b5f3c3a350369a68b944d9a0052552ec14
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Tipos/Quarto.hs:
+  hash: 9e0ff186e0bc36c9af731ca6bb7e1f0e2d79b4e9871789e46203d241fc4ecf17
+/Users/pedrotenorio/Documents/Hotel-Animais---haskell/hotel-animais/src/Tipos/Reserva.hs:
+  hash: 9f5ef6b55daec748f04bf8cd6276ee08973aa0911d31684050948353b9a71393

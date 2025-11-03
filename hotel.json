@@ -1,0 +1,41 @@
+{
+    "animais": [
+        {
+            "animalID": 1,
+            "donoCpfAnimal": "10500355428",
+            "especieAnimal": "Cachorro",
+            "idadeAnimal": 5,
+            "nomeAnimal": "Fiona",
+            "pesoAnimal": 6,
+            "racaAnimal": "Pug"
+        }
+    ],
+    "donos": [
+        {
+            "cpfDono": "10500355428",
+            "emailDono": "pedrohtenorio@icloud.com ",
+            "nomeDono": "Pedro Henrique Tenório Costa ",
+            "telefoneDono": "(81)996439359"
+        }
+    ],
+    "nextAnimalID": 2,
+    "nextReservaID": 2,
+    "nomeHotel": "Haskell Pet Hotel",
+    "quartos": [
+        {
+            "numeroQuarto": 101,
+            "ocupado": true,
+            "tipoQuarto": "Simples"
+        }
+    ],
+    "reservas": [
+        {
+            "animalIDReserva": 1,
+            "dataEntrada": "05/07/2025",
+            "dataSaida": "05/06/2025",
+            "precoTotal": 100,
+            "quartoIDReserva": 101,
+            "reservaID": 1
+        }
+    ]
+}
