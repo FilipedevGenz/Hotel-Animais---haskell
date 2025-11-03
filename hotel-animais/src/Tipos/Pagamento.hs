@@ -1,3 +1,6 @@
+-- Representa a entidade pagamento no sistema.
+-- Tem como atributos: tipo de pagamento, valor e detalhes específicos.
+
 module Tipos.Pagamento where
 
 import GHC.Generics (Generic)

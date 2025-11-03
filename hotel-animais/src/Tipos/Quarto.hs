@@ -1,3 +1,6 @@
+-- Representa a entidade quarto no sistema.
+-- Tem como atributos: número do quarto, tipo de quarto e status de ocupação.
+
 module Tipos.Quarto where
 
 import Tipos.Common

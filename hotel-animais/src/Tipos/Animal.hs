@@ -1,3 +1,6 @@
+-- Representa a entidade animal no sistema. 
+-- Tem como atributos: ID, nome, idade, espécie, raça, peso e CPF do dono.
+
 module Tipos.Animal where
 
 import Tipos.Common

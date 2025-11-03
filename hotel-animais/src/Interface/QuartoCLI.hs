@@ -1,18 +1,15 @@
+-- Menu de "Gerenciar Quartos"
+-- Exporta o loop principal e a listagem
 module Interface.QuartoCLI (gerenciarQuartos, handleListarQuartos) where
 
--- Imports de Tipos
 import Tipos.Hotel (Hotel(..), quartos)
 import Tipos.Quarto
-
--- Imports de Serviços
-import Service.QuartoService
-
--- Imports de Utilitários
+import Service.QuartoService -- puxa a lógica (adicionarQuarto)
 import Interface.Utils (prompt)
-import Text.Read (readMaybe)
+import Text.Read (readMaybe) -- pra validar número
 
--- Loop principal da gerência de quartos
--- Retorna o estado atualizado do hotel
+-- Loop principal da gerência de quartos.
+-- Devolve o hotel atualizado (IO Hotel)
 gerenciarQuartos :: Hotel -> IO Hotel
 gerenciarQuartos hotel = do
     putStrLn "\n=== Gerenciar Quartos ==="
@@ -26,16 +23,17 @@ gerenciarQuartos hotel = do
     case opcao of
         "1" -> do
             (novoHotel, res) <- handleAdicionarQuarto hotel
+            -- checa o resultado do service
             case res of
                 Left err  -> putStrLn $ "\nERRO: " ++ err
                 Right quarto -> putStrLn $ "\nSucesso! Quarto " ++ show (numeroQuarto quarto) ++ " adicionado."
-            gerenciarQuartos novoHotel -- Chama a si mesmo recursivamente
+            gerenciarQuartos novoHotel -- recursão com novo estado
             
         "2" -> handleListarQuartos hotel >> gerenciarQuartos hotel
-        "0" -> return hotel -- Retorna o estado atualizado para o loop principal
+        "0" -> return hotel -- Ponto de saída!
         _   -> putStrLn "Opção inválida." >> gerenciarQuartos hotel
 
--- Handlers
+-- "Formulário" para adicionar um quarto.
 handleAdicionarQuarto :: Hotel -> IO (Hotel, Either String Quarto)
 handleAdicionarQuarto hotel = do
     putStrLn "--- Adicionar Novo Quarto ---"
@@ -45,22 +43,25 @@ handleAdicionarQuarto hotel = do
     let tipoQuarto = case tipoStr of
                         "2" -> Luxo
                         "3" -> VIP
-                        _   -> Simples
+                        _   -> Simples -- default
 
     case readMaybe numStr of
         Nothing -> return (hotel, Left "Número do quarto inválido.")
         Just numQuarto ->
+            -- cria o novo quarto (sempre começa desocupado)
             let novoQuarto = Quarto numQuarto tipoQuarto False
+            -- e passa pro 'Service' salvar
             in return $ adicionarQuarto novoQuarto hotel
 
--- Funções de Listagem
+-- como imprimir um quarto na tela.
 imprimirQuarto :: Quarto -> IO ()
 imprimirQuarto quarto = do
     putStrLn $ "  Número:   " ++ show (numeroQuarto quarto)
     putStrLn $ "  Tipo:     " ++ show (tipoQuarto quarto)
     putStrLn $ "  Ocupado:  " ++ show (ocupado quarto)
-    putStrLn "  --------------------------------" -- Separador
+    putStrLn "  --------------------------------"
 
+-- lista todos os quartos
 handleListarQuartos :: Hotel -> IO ()
 handleListarQuartos hotel = do
     putStrLn "\n--- LISTA DE QUARTOS ---"

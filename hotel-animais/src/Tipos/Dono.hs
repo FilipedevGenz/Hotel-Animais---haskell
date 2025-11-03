@@ -1,3 +1,6 @@
+-- Representa a entidade dono no sistema.
+-- Tem como atributos: nome, telefone, email e CPF.
+
 module Tipos.Dono where
 
 import Tipos.Common

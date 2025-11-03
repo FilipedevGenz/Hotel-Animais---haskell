@@ -1,3 +1,6 @@
+-- Criamos um módulo comum para centralizar os tipos algébricos
+-- básicos repetidos em várias partes do sistema.
+
 module Tipos.Common where
 
 type Nome = String

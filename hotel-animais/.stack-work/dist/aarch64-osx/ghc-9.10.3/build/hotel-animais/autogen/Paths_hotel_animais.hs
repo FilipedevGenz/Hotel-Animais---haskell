@@ -47,7 +47,7 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 bindir     = "/Users/pedrotenorio/Documents/Hotel-Animais---haskell/.stack-work/install/aarch64-osx/81623dd87ae011bd1d2f99f90a1c189f28c6172a57a732679a33c529417875f7/9.10.3/bin"
-libdir     = "/Users/pedrotenorio/Documents/Hotel-Animais---haskell/.stack-work/install/aarch64-osx/81623dd87ae011bd1d2f99f90a1c189f28c6172a57a732679a33c529417875f7/9.10.3/lib/aarch64-osx-ghc-9.10.3-fe9c/hotel-animais-0.1.0.0-GRxUiDAUm61LaMAw2oBKuR-hotel-animais"
+libdir     = "/Users/pedrotenorio/Documents/Hotel-Animais---haskell/.stack-work/install/aarch64-osx/81623dd87ae011bd1d2f99f90a1c189f28c6172a57a732679a33c529417875f7/9.10.3/lib/aarch64-osx-ghc-9.10.3-fe9c/hotel-animais-0.1.0.0-7LgkV7v4RqzDHpEkcb8iLu-hotel-animais"
 dynlibdir  = "/Users/pedrotenorio/Documents/Hotel-Animais---haskell/.stack-work/install/aarch64-osx/81623dd87ae011bd1d2f99f90a1c189f28c6172a57a732679a33c529417875f7/9.10.3/lib/aarch64-osx-ghc-9.10.3-fe9c"
 datadir    = "/Users/pedrotenorio/Documents/Hotel-Animais---haskell/.stack-work/install/aarch64-osx/81623dd87ae011bd1d2f99f90a1c189f28c6172a57a732679a33c529417875f7/9.10.3/share/aarch64-osx-ghc-9.10.3-fe9c/hotel-animais-0.1.0.0"
 libexecdir = "/Users/pedrotenorio/Documents/Hotel-Animais---haskell/.stack-work/install/aarch64-osx/81623dd87ae011bd1d2f99f90a1c189f28c6172a57a732679a33c529417875f7/9.10.3/libexec/aarch64-osx-ghc-9.10.3-fe9c/hotel-animais-0.1.0.0"

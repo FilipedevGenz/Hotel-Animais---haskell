@@ -1,3 +1,7 @@
+-- Representa a entidade reserva no sistema.
+-- Tem como atributos: ID da reserva, ID do animal, ID do quarto, datas de
+-- entrada e saída, e preço total.
+
 module Tipos.Reserva where
 
 import Tipos.Common

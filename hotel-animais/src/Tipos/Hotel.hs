@@ -1,3 +1,7 @@
+-- Representa a entidade hotel no sistema.
+-- Tem como atributos: nome, lista de quartos, donos, animais, reservas e 
+-- IDs para novos animais e reservas.
+
 module Tipos.Hotel where
 
 import Tipos.Quarto
